@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		li{
+			display: block;
+			width: 200px;
+			height: 100px;
+			font-size: 50px;
+			line-height: 100px;
+			text-align: center;
+			border-bottom: 1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script type="text/javascript">
+$('li').on('click',function(){
+	console.log($(this).index())
+})
+</script>
+</html>
