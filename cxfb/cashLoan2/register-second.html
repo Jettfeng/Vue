@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=375, user-scalable=no,target-densitydpi=device-dpi,minimum-scale=0.5,maximum-scale=2.0">
+	<title>注册-second</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/loginRegister.css">
+</head>
+<body>
+	<div class="wrap">
+		<div v-show="alertbol" class="alert-box">{{ msg }}</div>
+        <div class="wrap-content">
+            <div class="wrap-content-inner">
+				<img src="img/login/logo.png" alt="">
+				<ul class="ul">
+					<li class="clear">
+						<span class="left">
+							<img src="img/login/VerificationCode.png" alt="">
+						</span>
+						<input v-model="code" type="text" placeholder="请输入短信验证码">
+					</li>
+                    <li class="clear">
+                        <span class="left">
+                            <img src="img/login/password.png" alt="">
+                        </span>
+                        <input v-model="password1" type="password" placeholder="设置你的登录密码">
+                    </li>
+					<li class="clear">
+						<span class="left">
+							<img src="img/login/password.png" alt="">
+						</span>
+						<input v-model="password2" type="password" placeholder="确认你的登录密码">
+                        <div class="passShow">
+                            <img v-show="passwordCorrect" src="img/login/passwordCorrect.png" alt="">
+                            <img v-show="passworderr" src="img/login/passworderr.png" alt="">
+                        </div>						
+					</li>
+				</ul>
+				<div class="errtips">
+					<!-- <p class="hide">手机号或密码填写错误，请重新填写</p> -->
+				</div>
+				<div v-on:click="submit" class="submit">
+                    <!-- <a href="login.html"> -->
+                        完成
+                    <!-- </a>					 -->
+				</div>
+                <p class="already">
+                    <a href="login.html">已有账号？去登录</a>    
+                </p>
+            </div>           
+        </div>
+        <div class="wrap-footer">
+			<img class="youmiImg" src="img/login/youmi.png" alt="">
+			<p>上市公司、互联网金融专项基金战略入股</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+var vm = new Vue({
+	el:'.wrap',
+	data:{
+		alertbol:false,
+		code:'',
+		password1:'',
+		password2:'',
+		passwordCorrect:false,
+		passworderr:false,
+		msg:''
+	},
+	methods:{
+		submit:function(){
+			if (this.code != '1111') {
+				this.msg = "验证码输入有误！";
+				this.timer(50);
+				return;
+			}
+			if (!this.password1 || !this.password2) {
+				this.msg = "请输入密码！";
+				this.timer(50);
+				return;
+			}
+			if (this.passworderr) {
+				return;
+			}
+			location.href = "login.html"
+		},
+		timer:function(n,fn){
+			var that = this;
+			this.alertbol = true
+			var timer = setInterval(function(){
+				n--;
+				if (n<=0) {
+					n = 0;
+					clearInterval(timer)
+					that.alertbol = false;
+					fn&&fn()					
+				}
+			},30)
+		}
+	},
+	watch:{
+		'password2':function(val,oldVal){
+			if (val.length != this.password1.length || val != this.password1) {
+				this.passworderr = true
+				this.passwordCorrect = false
+			}else if (val.length == this.password1.length && val == this.password1) {
+				this.passwordCorrect = true
+				this.passworderr = false
+			}
+		}
+	}
+})
+</script>
+</html>

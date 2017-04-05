@@ -1,0 +1,113 @@
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .wrap{
+            width: 100%;
+            height: 100%;
+        }
+        .wrap .content{
+            /*margin-bottom: 75px;*/
+            height: calc(100% - 50px);
+            overflow: scroll;
+        }
+        .wrap .content > img{
+            width: 100%;
+            height: 85px;
+        }
+        .wrap .content .brrowfetch{
+            width: 100%;
+            margin-top: 40px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .wrap .content .brrowfetch > img{
+            width: 16px;
+            height: 16px;
+            margin-left: 15px;
+            vertical-align: middle;
+        }
+        .wrap .content .brrowfetch > span{
+            font-size: 16px;
+            vertical-align: middle;
+            color: #424954;
+        }
+        .wrap .content .brrowfetch .money-ul{
+            width: 87%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+        }
+        .wrap .content .brrowfetch .money-ul .money-li{
+            flex: 1;
+            text-align: center;
+            font-size: 16px;
+            line-height: 52px;
+            padding-top: 17px;
+        }
+        .active{
+            color: #ff4c4c;
+            font-size: 24px !important;
+            font-weight: bold;
+            position: relative;
+        }
+        .active:after{
+            content: "";
+            display:block;
+            width: 65%;
+            height: 4px;
+            margin: 0 auto;
+            background: red;
+            position: absolute;
+            left: 20%;
+            bottom: -2px;
+            border-radius: 2px;
+        }
+
+        .wrap .content .tips{
+            width: 90%;
+            margin: 45px auto 24px auto;
+        }
+        .wrap .content .tips .num-color{
+            color: #ff4c4c
+        }
+        .wrap .content .tips .rate{
+            display: inline-block;
+            float:right;           
+        }
+        .wrap .content .tips .rate a{
+            color: #389df2;
+        }
+        .wrap .content .submit{
+            width: 92%;
+            height: 52px;
+            margin: 0 auto;
+            background: #ff4c4c;
+            border-radius: 4px;
+            line-height: 52px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .wrap .content .submit a{
+            color: #ffeeee;
+        }
+        .wrap .content .opentips{
+            text-align: center;
+            font-size: 14px;
+            color: #999999;
+            padding-top:17px;
+        }
+        .wrap .content .opentips img{
+            width: 14px;
+            height: 14px;
+            vertical-align: middle;
+        }
+        .wrap .content .opentips span{
+            vertical-align: middle;
+        }
+        /*footer*/
+    /*........................................................*/
+        .wrap .footer .footer-ul li:nth-child(1) a{
+            color: red
+        }
+    /*...........................................................*/
+       

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=375, user-scalable=no,target-densitydpi=device-dpi,minimum-scale=0.5,maximum-scale=2.0">
+	<title>提现</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<style type="text/css">
+		body{
+			background: #eeeeee;
+		}
+		.wrap{
+			width: 100%;
+		}
+		.wrap .ul{
+			width: 100%;
+			font-size: 16px;
+			color: #999999;
+		}
+		.wrap .ul li{
+			width: 92%;
+			padding: 0 4%;
+			background: #ffffff;
+			overflow: hidden;
+			height: 44px;
+			line-height: 44px;
+			position: relative;
+		}
+		.wrap .ul li:nth-child(1){
+			border-bottom: 1px solid #e2e2e2;
+		}
+		.wrap .ul li:nth-child(3) i{
+			display: block;
+			height: 44px;
+			float: right;
+			font-size: 14px;
+		}
+		.wrap .ul li:nth-child(3) i a{
+			display: block;
+			color: #999999
+		}
+		.wrap .ul li:nth-child(2) img{
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 8px;
+			right: 10px;
+		}
+		.wrap .ul li span{
+			display: inline-block;
+			float: left;
+			height: 100%;
+		}
+		.wrap .ul li span:nth-child(1){
+			width: 25%;
+			text-align: center;
+		}
+		
+		.wrap .ul li:nth-child(1) span:nth-child(2){
+			color: #ff4c4c;
+		}
+		.wrap .ul li:nth-child(2) span:nth-child(2){
+			color: #666666;
+		}
+		.wrap .ul li:nth-child(3){
+			background: #eeeeee;
+			color: #666666;
+		}		
+		.wrap .ul li:nth-child(4) span:nth-child(2){
+			float: right;
+			color: #666666;
+		}
+		.wrap .ul li:nth-child(5){
+			background: #eeeeee;
+		}
+		.wrap .ul li:nth-child(5) img{
+			display: block;
+			float: left;
+			width: 14px;
+			height: 14px;
+			margin-top: 14px;
+			margin-right: 5px;
+		}
+		.wrap .ul li:nth-child(5) span:nth-child(1){
+			padding-left: 22px;
+			color: #717171;
+			
+		}
+		.wrap .ul li:nth-child(5) span:nth-child(2){
+			float: right;
+			color: #3366ff;
+			font-size: 12px;
+		}
+		.wrap p{
+			text-align: center;
+			font-size: 12px;
+		}
+		.wrap .zero{
+			color: #dc4444;
+			margin-top: 20px;
+		}
+		.wrap .btn{
+			width: 60%;
+			height: 50px;
+			margin: 10px auto;
+			color: #ffffff;
+			background: #ff4c4c;
+			border-radius: 10px;
+			text-align: center;
+			line-height: 50px;
+		}
+		.wrap .tips{
+			font-size: 12px;
+			vertical-align: middle;
+			color: #999999;
+			text-align: center;
+		}
+		.wrap .tips img{
+			height: 12px;
+			vertical-align: middle;
+		}
+		.wrap .alert{
+			width: 60%;
+			height: 42px;
+			margin: 0 auto;
+			font-size: 14px;
+			color: #ffffff;
+			background: rgba(0,0,0,0.5);
+			padding: 5px;
+			border-radius: 5px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="ul">
+			<li>
+				<span class="left">账户余额：</span>
+				<span class="right">0.23元</span>
+				<!-- <i><a href="withdrawalsTips.html">提现说明</a></i> -->
+			</li>
+			<li>
+				<span class="left">银行卡号：</span>
+				<span class="right">1111111111111111111</span>
+				<img src="../img/head.png" alt="">
+			</li>
+			<li>
+				提现金额：
+				<i><a href="withdrawalsTips.html">提现说明</a></i>
+			</li>
+			<li>	
+				<input type="text" placeholder="请输入提现金额">
+				<span>元</span>
+			</li>
+			<li>
+				<img src="../img/gou_grey.png" alt="">
+				<span class="left1">使用提现券（可使用1张）</span>
+				<span class="left2">如何获得提现券</span>
+			</li>
+		</ul>
+		<p class="zero">本次提现收费0元</p>
+		<div class="btn">立即提现</div>
+		<p class="tips">福利金融由央行监管的<img src="../img/huifu.png" alt="">进行资金托管</p>
+		<div class="alert">您每月可以获赠1张抵扣券，您还可以通过参加平台活动获得提现券</div>
+	</div>
+</body>
+</html>

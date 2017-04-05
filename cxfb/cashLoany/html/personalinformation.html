@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=375, user-scalable=no,target-densitydpi=device-dpi,minimum-scale=0.5,maximum-scale=2.0">
+	<title>个人信息</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/information.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="wrap-content">
+			<div class="wrap-inner">
+				<img src="../img/Group21Copy.png" alt="">
+				<div class="information">
+					<ul class="in-ul">
+						<li class="in-li arrow">
+							<span>婚姻情况</span>
+							<select v-model="maritalStatus">
+								<option value="未婚">未婚</option>
+								<option selected="" value="已婚">已婚</option>
+								<option value="丧偶">丧偶</option>
+							</select>
+						</li>
+						<li class="in-li arrow">
+							<span>住房情况</span>
+							<select v-model="housingSituation">
+								<option value="租房">租房</option>
+								<option selected="" value="已买房房">已买房房</option>
+								<option value="与父母同住">与父母同住</option>
+							</select>
+						</li>
+						<li class="in-li arrow">
+							<span>文化情况</span>
+							<select v-model="culturalSituation">
+								<option value="博士">博士</option>
+								<option value="硕士">硕士</option>
+								<option selected="" value="本科">本科</option>
+								<option value="大专">大专</option>
+								<option value="中专">中专</option>
+								<option value="高中">高中</option>
+								<option value="初中">初中</option>
+								<option value="小学">小学</option>
+							</select>
+						</li>
+					</ul>
+					<div class="ul-margin"></div>
+					<ul class="in-ul">
+						<li class="in-li arrow">
+							<span>居住地址</span>
+							<select id="">
+								<option value="请选择省/市/区/县">请选择省/市/区/县</option>
+								<option value="请选择省/市/区/县">请选择省/市/区/县</option>			
+								<option value="请选择省/市/区/县">请选择省/市/区/县</option>
+								<option value="请选择省/市/区/县">请选择省/市/区/县</option>
+								<option value="请选择省/市/区/县">请选择省/市/区/县</option>
+								<option value="请选择省/市/区/县">请选择省/市/区/县</option>
+								<option value="请选择省/市/区/县">请选择省/市/区/县</option>
+								<option value="请选择省/市/区/县">请选择省/市/区/县</option>
+								<option value="请选择省/市/区/县">请选择省/市/区/县</option>
+							</select>
+						</li>
+						<li class="in-li arrow">
+							<!-- <span>单位地址</span> -->
+							<input type="text" placeholder="填写详细地址">
+						</li>
+						<li class="in-li arrow">
+							<span>居住时长</span>
+							<select v-model="liveTime">
+								<option value="0-6个月">0-6个月</option>
+								<option selected="">6-12个月</option>
+								<option value="12-18个月">12-18个月</option>
+								<option value="18-24个月">18-24个月</option>
+								<option value="24个月以上">24个月以上</option>
+							</select>
+						</li>
+					</ul>
+					<div class="ul-margin"></div>
+					<ul class="in-ul">
+						<li class="in-li arrow">
+							<span>联系人关系</span>
+							<select v-model="contacts1">
+								<option value="父亲">父亲</option>
+								<option selected="" value="母亲">母亲</option>
+								<option value="兄妹">兄妹</option>
+							</select>
+						</li>
+						<li class="in-li arrow">
+							<span>姓名</span>
+							<input type="text" placeholder="请填写联系人姓名">
+						</li>
+						<li class="in-li arrow">
+							<span>联系电话</span>
+							<input type="text" placeholder="请填写11位手机号码">
+						</li>
+					</ul>
+					<div class="ul-margin"></div>
+					<ul class="in-ul">
+						<li class="in-li arrow">
+							<span>联系人关系</span>
+							<select name="" id="">
+								<option value="朋友">朋友</option>
+							</select>
+						</li>
+						<li class="in-li arrow">
+							<span>姓名</span>
+							<input type="text" placeholder="请填写联系人姓名">
+						</li>
+						<li class="in-li arrow">
+							<span>联系电话</span>
+							<input type="text" placeholder="请填写11位手机号码">
+						</li>
+					</ul>												
+				</div>
+			</div>
+		</div>
+		<div class="ul-margin"></div>
+		<div class="wrap-footer">
+			<a href="companyinformation.html">
+				下一步
+			</a>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+var vm = new Vue({
+	el:'.wrap',
+	data:{
+		maritalStatus:'已婚',
+		housingSituation:'租房',
+		culturalSituation:'本科',
+		liveTime:'6-12个月',
+		contacts1:'母亲'
+	}
+})
+</script>
+</html>

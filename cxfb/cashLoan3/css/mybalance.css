@@ -1,0 +1,43 @@
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			background: #f5f6f8;
+		}
+		.wrap{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+		}
+		.wrap .header{
+			background:#ff4c4c;
+			color: #ffffff;
+			padding: 20px 0 12px 0;
+		}
+		.wrap .mine-ul{
+			width: 100%;
+		}
+		.wrap .mine-ul li{
+			text-align: left;
+			line-height: 50px;
+			font-size: 16px;
+			border-bottom: 1px solid #e5e5e5;
+			padding-left: 11%;
+		}
+		.wrap .mine-ul li a{
+			display: block;
+		}
+		.wrap .mine-ul li:nth-child(1){
+			background: #ffffff url('../img/yuer.png') no-repeat 4% 50%;
+			background-size: 18px 18px;
+		}
+		.wrap .mine-ul li:nth-child(2){
+			background: #ffffff url('../img/tixian.png') no-repeat 4% 50%;
+			background-size: 18px 18px;
+		}
+		.wrap .mine-ul li:nth-child(3){
+			background: #ffffff url('../img/mingxi.png') no-repeat 4% 50%;
+			background-size: 18px 18px;
+			margin-top: 10px;
+		}

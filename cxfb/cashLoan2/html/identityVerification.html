@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=375, user-scalable=no,target-densitydpi=device-dpi,minimum-scale=0.5,maximum-scale=2.0">
+	<title>身份认证</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/identityVerification.css">
+	<style type="text/css">
+		.peopleitemnew{
+			width: 100%;
+		}
+		.peopleitemnew .ul .itemli{
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			overflow: hidden;
+
+		}
+		.peopleitemnew .ul .itemli .span-left,.peopleitemnew .input-left{
+			display: inline-block;
+			float: left;
+		}
+		.peopleitemnew .ul .itemli .span-left{
+			width: 32%;
+		}
+		.peopleitemnew .ul .itemli .input-left{
+			width: 68%;
+			line-height: 50px;
+		}
+    </style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="wrap-top">
+			<div class="inner">
+				<div class="content">
+					<div class="idcard clear">
+						<div class="left fl">
+							<p>身份证人像面</p>
+							<div class="picture">
+								<div v-show="show.positive" class="camera">
+									<input type="file" class="positive" capture="camera" accept="image/*" id="cameraInput" @change="getImage"/>
+								</div>
+								<img v-show="!show.positive" id="positive" @click="delImage($event)" class="upload" :src="image.positive" alt="">
+							</div>
+						</div>
+						<div class="right fl">
+							<p>身份证国徽面</p>
+							<div class="picture">
+								<div v-show="show.back" class="camera">
+									<input type="file" class="back" capture="camera" accept="image/*" id="cameraInput" @change="getImage"/>
+								</div>
+								<img v-show="!show.back" id="back" @click="delImage($event)" class="upload" :src="image.back" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="peopleitemnew">
+						<ul class="ul">
+							<li class="itemli">
+								<span  class="span-left">哈哈哈哈</span>
+								<input class="input-left" type="date" placeholder="2017-03-22">
+							</li>
+						</ul>
+					</div>
+					<!-- <div class="peopleitem">
+						<ul class="identityUl">
+							<li class="identityLi">
+								<span>真是姓名</span>
+								<input v-model="name" type="text" placeholder="暂无信息">
+							</li>
+							<li class="identityLi">
+								<span>身份证号</span>
+								<input v-model="idcard" type="number" placeholder="暂无信息">
+							</li>
+							<li class="identityLi">
+								<span>户籍地址</span>
+								<input v-model="address" type="text" placeholder="暂无信息">
+							</li>
+							<li class="identityLi">
+								<span>有效期</span>
+								<div class="input">
+									<input type="date" v-model="validity"  placeholder="暂无信息">
+								</div>								
+								<div>至</div>
+								<div class="input">
+									<input type="date" v-model="validity" placeholder="暂无信息">
+								</div>								
+							</li>
+						</ul>
+					</div> -->
+				</div>
+
+				<div class="content">
+					<div class="idcard clear">
+						<div class="left fl">
+							<p>活体信息采集</p>
+							<div class="picture">
+								<div v-show="show.living" class="camera">
+									<input type="file" class="image.living" capture="camera" accept="image/*" id="cameraInput" @change="getImage"/>
+								</div>
+								<!-- <img src="../img/upload.png" alt=""> -->
+								<img v-show="!show.living" id="living" @click="delImage($event)" class="upload" :src="image.living" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div v-on:click="submit" class="wrap-submit">
+			<!-- <a href="personalinformation.html"> -->
+			确认无误并提交
+			<!-- </a>		 -->
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+var vm = new Vue({
+	el:'.wrap',
+	data:{
+		name:'',
+		idcard:'',
+		address:'',
+		validity:'2017-03-02',
+		show:{
+			positive:true,
+			back:true,
+			living :true
+		},
+		image:{
+			positive:'',
+			back:'',
+			living :''
+		}	
+	},
+	methods:{		
+		getImage:function(e){
+			 console.log(e)
+			var files = e.target.files || e.dataTransfer.files;
+		    var className = e.target.className;
+			//console.log(files.length)
+            if (!files.length)return; 
+            this.createImage(files,className);
+		},
+		createImage:function(file,className){
+            if(typeof FileReader==='undefined'){
+                alert('您的浏览器不支持图片上传，请升级您的浏览器');
+                return false;
+            }
+            var image = new Image();         
+            var that = this;
+            var leng=file.length;
+            for(var i=0;i<leng;i++){
+                var reader = new FileReader();
+                reader.readAsDataURL(file[i]); 
+                reader.onload =function(e){
+                	//console.log(e)
+                	//console.log(className)
+                	if (className == "positive") {
+                		that.image.positive = e.target.result;
+                		that.show.positive = false;
+                	}else if (className == "back") {
+                		that.image.back = e.target.result;
+                		that.show.back = false;
+                	}else{
+                		that.image.living = e.target.result;
+                		that.show.living = false;
+                	}
+                // vm.images.push(e.target.result);                                    
+                };                 
+            }   
+        },
+        delImage:function(e){
+        	if (e.target.id == "positive") {
+        		this.image.positive = ""
+        		this.show.positive = true
+        	} 
+        	if (e.target.id == "back") {
+        		this.image.back = ""
+        		this.show.back = true
+        	} 
+        	if (e.target.id == "living") {
+        		this.image.living = ""
+        		this.show.living = true
+        	} 
+        },
+        submit:function(){
+        	// if (this.image.positive=="") {
+        	// 	alert("请拍身份证人像面并上传")
+        	// 	return;
+        	// }
+        	// if (this.image.back=="") {
+        	// 	alert("请拍身份证国徽面并上传")
+        	// 	return;
+        	// }
+        	// if (this.name == "") {
+        	// 	alert('请输入姓名');
+        	// 	return;
+        	// }
+        	// if (this.idcard == "") {
+        	// 	alert('请输入身份证号');
+        	// 	return;
+        	// }
+        	// if (this.address == "") {
+        	// 	alert('请选择地址');
+        	// 	return;
+        	// }
+        	// if (this.validity == "") {
+        	// 	alert('请输入身份证有效期');
+        	// 	return;
+        	// }
+        	// if (this.image.living=="") {
+        	// 	alert("请自拍并上传")
+        	// 	return;
+        	// }
+        	location.href = "personalinformation.html"
+        }
+	}
+})
+</script>
+</html>

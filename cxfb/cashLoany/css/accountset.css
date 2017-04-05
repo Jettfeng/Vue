@@ -1,0 +1,58 @@
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			background: #f5f6f8;
+		}
+		.accountset-wrap{
+			height: calc(100% - 10px);
+			padding-top: 10px;
+		}
+		.accountset-wrap .ul{
+			width: 100%;
+			background: #ffffff;
+		}
+		.accountset-wrap .ul li{
+			width: 96%;
+			padding: 0 2%;
+			line-height: 50px;
+		}
+		.accountset-wrap .ul .ul-li1{
+			border-bottom: 1px solid #e5e5e5;
+			background: url('../img/Rectangle.png') no-repeat 96% 50%;
+			background-size: 8px 14px;
+		}
+		.accountset-wrap .ul .ul-li1 a{
+			display: block;
+		}
+		.accountset-wrap .ul .ul-li2{
+			overflow: hidden;
+		}
+		.accountset-wrap .ul .ul-li2 .outer{
+			display: inline-block;
+			float: right;
+			background: #4cd964;
+			margin-top: 10px;
+			width: 46px;
+			height: 26px;
+			border-radius: 15px;
+			border:2px solid #4cd964;
+			position: relative;
+		}
+		.accountset-wrap .ul .ul-li2 .outer .inner{
+			display: inline-block;
+			width: 26px;
+			height: 26px;
+			border-radius: 50%;
+			background: #ffffff;
+			position: absolute;
+			right: 0;
+		}
+		.accountset-wrap .quote{
+			line-height: 50px;
+			margin-top: 10px;
+			text-align: center;
+			background: #ffffff;
+
+		}

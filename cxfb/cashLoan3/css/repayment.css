@@ -1,0 +1,59 @@
+        html,body{
+            width: 100%;
+        }
+        body{
+            background: #f5f6f8;
+        }
+        .wrap{
+            width: 100%;
+        }
+        .wrap .content{
+            margin-bottom: 70px;
+        }
+        .wrap .content .repay-ul{
+            width: 100%;
+        }
+        .wrap .content .repay-ul .repay-li{
+            width: calc(100% - 30px);
+            margin: 15px auto;
+            background: #ffffff url('../img/Rectangle.png') no-repeat 95% 50%;
+            padding-bottom: 30px;
+            background-size:8px 14px; 
+            box-shadow: 0px 2px 4px #e5e5e5;
+
+        }
+        .wrap .content .repay-ul .repay-li h2{
+            font-size: 20px;
+            padding: 30px 0 30px 30px;
+        }
+        .wrap .content .repay-ul .repay-li p{
+            font-size: 14px;
+            color: #999999;
+            padding-left: 50px;
+            position: relative;
+        }
+        .wrap .content .repay-ul .repay-li .brrow:after,.wrap .content .repay-ul .repay-li .fetch:after{
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;           
+            position:absolute;
+            left: 10%;
+            top: 35%;
+            border-radius: 50%;
+        }
+        .wrap .content .repay-ul .repay-li .brrow:after{
+             background: #4a90e2;
+        }
+        .wrap .content .repay-ul .repay-li .fetch:after{
+            background: #ff4c4c;
+        }
+        .redcolor{
+            color: red !important;
+        }
+        /*footer*/
+    /*...............................................*/
+        .wrap .footer .footer-ul li:nth-child(2) a{
+            color: red
+        }
+    /*........................................................................*/

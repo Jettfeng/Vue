@@ -1,0 +1,29 @@
+@charset="UTF-8";
+ .wrap .footer{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    font-size: 14px;
+    background: #ffffff;
+}
+.wrap .footer .footer-ul{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    border-top: 1px solid #e5e5e5;
+}
+.wrap .footer .footer-ul li{
+    flex: 1;
+    text-align: center;
+}
+.wrap .footer .footer-ul li a{
+    display: block;
+    color: #b1b1b1;
+}
+.wrap .footer .footer-ul li a img{
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 5px auto auto auto;
+}

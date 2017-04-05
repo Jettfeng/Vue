@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=375, user-scalable=no,target-densitydpi=device-dpi,minimum-scale=0.5,maximum-scale=2.0">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/loginRegister.css">
+</head>
+<body>
+	<div class="wrap">
+        <div class="wrap-content">
+            <div class="wrap-content-inner">
+				<img src="img/login/logo.png" alt="">
+				<ul class="ul">
+					<li class="clear">
+						<span class="left">
+							<img src="img/login/iphone.png" alt="">
+						</span>
+						<input v-model="tel" type="number" placeholder="请输入手机号码">
+					</li>
+					<li class="clear">
+						<span class="left">
+							<img src="img/login/password.png" alt="">
+						</span>
+						<input v-model="password" v-show="!passwordshow" type="password" placeholder="请输入登录密码">
+						<input v-model="password" v-show="passwordshow" type="text">
+                        <div class="passShow1">
+                            <img v-on:click="change" v-show="!passwordshow" src="img/login/passwordhide.png" alt="">
+                            <img v-on:click="change" v-show="passwordshow" src="img/login/passwordshow.png" alt="">
+                        </div>						
+					</li>
+				</ul>
+				<div class="errtips">
+					<p v-show="!telErr">手机号或密码填写错误，请重新填写</p>
+				</div>
+				<div class="submit" v-on:click="submit">
+                    <!-- <a href="html/index.html">  -->
+                        登录
+                    <!-- </a>					 -->
+				</div>
+				<ul class="tips">
+					<li><a href="findbackPassword.html">忘记密码</a></li>
+					<li><a href="register.html">注册账号</a></li>
+					<li><a href="###">联系客服</a></li>
+				</ul>
+            </div>           
+        </div>
+        <div class="wrap-footer">
+			<img class="youmiImg" src="img/login/youmi.png" alt="">
+			<p>上市公司、互联网金融专项基金战略入股</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+var vm = new Vue({
+	el:'.wrap',
+	data:{
+		tel:'',
+		telErr:true,
+		tips_bol:false,
+		password:'',
+		passwordshow:false
+	},
+	methods:{		
+		change:function(){
+			if (!this.password.trim()) {
+				return;
+			}
+			this.passwordshow = !this.passwordshow;
+		},
+		submit:function(){
+			if (this.tel == '18518914736' && this.password == '1111' ) {
+				//this.telErr = true;
+				location.href = "html/index.html";
+			}else{
+				this.telErr = false;
+			}			
+		}
+	}
+})
+</script>
+</html>

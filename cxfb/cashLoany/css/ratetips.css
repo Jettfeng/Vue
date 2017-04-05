@@ -1,0 +1,25 @@
+		body{
+			background: #f5f6f8;
+		}
+		.wrap .tips-ul{
+			width: 100%;
+		}
+		.wrap .tips-ul .tips-li{
+			padding:0 15px 15px 15px;
+			margin-top: 10px;
+			background: #ffffff;
+		}
+		.wrap .tips-ul .tips-li h4{
+			border-bottom: 1px solid #e5e5e5;
+			font-size: 16px;
+			color: #424954;
+			line-height: 50px;
+		}
+		.wrap .tips-ul .tips-li p{
+			color: #666666;
+			font-size: 14px;
+			line-height: 21px;
+		}
+		.p-padding{
+			padding-top: 13px;
+		}

@@ -1,0 +1,81 @@
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background: #f5f6f8;
+        }
+        .wrap{
+            width: 100%;
+            border-top: 1px solid #dbdbdb;
+            font-size: 16px;
+        }
+        .wrap .content{
+            width: 100%;
+        }
+        .wrap .content .name{
+            width: 100%;
+            padding: 15px 0;
+            background: #ffffff;
+            overflow: hidden;
+        }
+        .wrap .content .name > div{
+            float: left;
+        }
+        .wrap .content .name .left {
+            width: 12%;
+            padding-left: 4%;
+        }
+        .wrap .content .name .left img{
+            width: 100%;
+        }
+        .wrap .content .name .right{
+            width: 80%;
+            padding-left: 4%;
+        }
+        .wrap .content .name .right p:nth-child(2){
+            color: #969696;
+        }
+        .wrap .content .me-ul{
+            width: 100%;
+            background: #ffffff;
+        }
+        .wrap .content .me-ul .me-li{
+            margin-left:4%;
+            padding-left: 7%;
+            line-height: 50px;  
+            overflow: hidden;
+        }
+        .wrap .content .me-ul .me-li a{
+            display: block;
+        }
+        .me-li1{
+            background: url('../img/yuer.png') 0% 50% no-repeat,url('../img/Rectangle.png') no-repeat 96% 50%;
+            background-size: 18px 18px,8px 14px;
+        }
+        .me-li1 span{
+            display: inline-block;
+            float: right;
+            color: #979797;
+            margin-right: 8%;
+        }
+        .me-li2{
+            background: url('../img/zhanghu.png') 0% 50% no-repeat,url('../img/Rectangle.png') no-repeat 96% 50%;
+            background-size: 18px 18px,8px 14px;
+        }
+        .me-li3{
+            background: url('../img/kefu.png') 0% 50% no-repeat,url('../img/Rectangle.png') no-repeat 96% 50%;
+            background-size: 18px 18px,8px 14px;
+        }
+        .margin-top{
+            margin-top: 10px;
+        }
+        .border-top{
+            border-top: 1px solid #e4e4e4;
+        }
+        /*footer*/
+    /*..............................................................................*/
+        .wrap .footer .footer-ul li:nth-child(3) a{
+            color: red
+        }
+    /*........................................................................................*/

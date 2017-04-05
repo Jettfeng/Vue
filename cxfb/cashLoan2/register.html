@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=375, user-scalable=no,target-densitydpi=device-dpi,minimum-scale=0.5,maximum-scale=2.0">
+	<title>注册</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/loginRegister.css">
+</head>
+<body>
+	<div class="wrap">
+		<div v-show="alertbol" class="alert-box">{{ msg }}</div>
+        <div class="wrap-content">
+            <div class="wrap-content-inner">
+				<img src="img/login/logo.png" alt="">
+                <p>注册福利金融账号享受理财</p>
+				<ul class="ul">
+					<li class="clear">
+						<span class="left">
+							<img src="img/login/iphone.png" alt="">
+						</span>
+						<input v-model="tel" type="number" maxlength="11" placeholder="请输入注册电话">
+					</li>
+				</ul>
+                <div class="errtips">
+                    <p class="hide">手机号或密码填写错误，请重新填写</p>
+                </div>
+				<div v-on:click="submit" class="submit">
+                    <!-- <a href="register-second.html"> -->
+                        下一步
+                    <!-- </a>					 -->
+				</div>
+                <p class="already">
+                    <a href="login.html">已有账号？去登录</a>               
+                </p>
+            </div>           
+        </div>
+        <div class="wrap-footer">
+			<img class="youmiImg" src="img/login/youmi.png" alt="">
+			<p>上市公司、互联网金融专项基金战略入股</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+var vm = new Vue({
+	el:'.wrap',
+	data:{
+		tel:'',
+		tel_bol:false,
+		msg:'',
+		alertbol:false
+	},
+	methods:{		
+		submit:function(){
+			if (!this.tel_bol) {			
+				this.msg = "手机号码输入有误！"
+				this.timer(50)
+				return
+			}
+			location.href = "register-second.html"
+		},
+		timer:function(n){
+			var that = this;
+			this.alertbol = true
+			var timer = setInterval(function(){
+				n--;
+				if (n<=0) {
+					n = 0;
+					clearInterval(timer)
+					that.alertbol = false					
+				}
+			},30)
+		}
+	},
+	watch:{
+		tel: function (val, oldVal) {
+			var reg = /^1[34578]\d{9}$/;
+			//var tel_bol = false;
+     		if (val.length != 11 || !reg.test(val)) {
+     			this.tel_bol = tel_bol = false
+     		}else{
+     			this.tel_bol = tel_bol = true
+     		}
+    	}
+	}
+})
+</script>
+</html>

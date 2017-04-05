@@ -1,0 +1,170 @@
+        html,body,.wrap{
+            width: 100%;
+            height: 100%;
+        }
+        .wrap{
+        	background: url('../img/login/bg.png') left bottom  no-repeat;
+        	background-size: 100% 40%;
+        }
+        .alert-box{
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            color: #ffffff;
+            position: fixed;
+            top: 0;
+            padding: 10px 0;
+            background: rgba(0,0,0,0.6);
+        }
+        .wrap-content{
+            width: 100%;
+            min-height: 100%;
+        }
+        .wrap-content .wrap-content-inner{
+            padding-bottom: 80px;
+            text-align: center;
+        }
+        .wrap-content .wrap-content-inner > img{
+        	margin: 50px auto 27px auto;
+        	width: 94px;
+        	height: 84px;
+        }
+        .wrap-content .wrap-content-inner .ul{
+            background: #ffffff;
+        	width: 92%;
+        	padding: 0 4%;
+        }
+        .wrap-content .wrap-content-inner .ul li{
+        	height: 59px;
+        	line-height:59px;
+        	position: relative;
+        	border-bottom: 1px solid #ededed;
+        }
+        .wrap-content .wrap-content-inner .left,.wrap-content .wrap-content-inner input{
+        	display: block;
+        	float: left;
+        }
+        .wrap-content .wrap-content-inner .left{
+			width: 32%;
+			height: 100%;
+			text-align: left;
+        }
+        .wrap-content .wrap-content-inner .right{
+            position: absolute;
+            right: 0;
+            top: 5%;
+            color: red;
+            font-size: 12px;
+
+        }
+        .wrap-content .wrap-content-inner .left img{
+        	width: 27px;
+        	height: 27px;
+        	padding-top: 8px;
+        }
+        .wrap-content .wrap-content-inner input{
+        	width: 65%;
+        	height: 100%;
+        	line-height: 59px;
+        	font-size: 17px;
+        }
+        .wrap-content .wrap-content-inner .ul li .passShow1{
+        	width: 20px;
+        	height: 20px;
+        	position: absolute;
+        	right: 5px;
+        	bottom: 15px;
+        }
+        .wrap-content .wrap-content-inner .ul li .passShow1 img{
+            display: block;
+            width: 100%;
+        }
+        .wrap-content .wrap-content-inner .errtips{
+            background: #ffffff;
+        	height: 35px;
+        }
+        .wrap-content .wrap-content-inner .errtips p{
+        	line-height: 35px;
+        	font-size: 14px;
+        	color: red;
+        }
+        .wrap-content .wrap-content-inner .submit{
+        	width: 96%;
+        	height: 58px;
+        	margin: 0 auto;
+        	background:url('../img/login/submit.png') no-repeat left top;
+        	background-size: 100% 100%;
+        	font-size: 18px;       	
+        	line-height: 52px;
+            color: #ffffff;
+        }
+        /*.wrap-content .wrap-content-inner .submit a{
+            display: block;
+            color: #ffffff;
+        }*/
+        .wrap-content .wrap-content-inner .tips{
+        	width: 70%;
+        	margin: 20px auto;
+        	display: flex;
+       		flex-direction: row;
+        }
+        .wrap-content .wrap-content-inner .tips li{
+        	flex: 1;
+            position: relative;
+        }
+		.wrap-content .wrap-content-inner .tips li a{
+			color: #9a9a99;
+		}
+        .wrap-content .wrap-content-inner .tips li:not(:first-child):after{
+            content: '';
+            display: block;
+            width: 1px;
+            height: 15px;
+            background: #9a9a99;
+            position: absolute;
+            top: 5px;
+        	/*border-left: 1px solid #9a9a99;*/
+        }
+        /*footer*/
+        .wrap-footer{
+        	width: 100%;
+            text-align: center;
+            color: #666666;
+            font-size: 14px;
+            margin: -80px auto 0 auto;
+        }
+		.wrap-footer .youmiImg{
+			width: 45%;
+			padding-bottom: 20px;
+		}
+
+/*register-second.................................................................*/
+
+        .wrap-content .wrap-content-inner .ul li .passShow{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 3px;
+            bottom: 10px;
+        }
+         .wrap-content .wrap-content-inner .ul li .passShow img{
+            display: block;
+            width: 100%;
+        }
+
+         .wrap-content .wrap-content-inner  .already{
+            margin-top: 12px;
+            font-size: 14px;
+        }
+        .wrap-content .wrap-content-inner  .already a{
+            color: #9a9a9a;
+        }
+
+    /*resister..................................................................*/
+    .wrap-content .wrap-content-inner  .already{
+            margin-top: 12px;
+            font-size: 14px;
+        }
+        .wrap-content .wrap-content-inner  .already a{
+            color: #9a9a9a;
+        }

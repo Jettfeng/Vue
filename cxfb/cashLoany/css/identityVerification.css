@@ -1,0 +1,153 @@
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			background: #f0f1f0;
+		}
+		.wrap{
+			width: 100%;
+			height: 100%;
+		}
+		.wrap .wrap-top{
+			min-height: 100%
+		}
+		.wrap .wrap-top .inner{
+			padding-bottom: 50px;
+			padding-top: 10px;
+		}
+		.wrap .wrap-top .inner .content{
+			background: #ffffff;
+		}
+		.wrap .wrap-top .inner .content:not(:first-child){
+			margin-top: 10px;
+		}
+		.wrap .wrap-top .inner .content .idcard{
+			padding-left: 15px;
+			padding-top: 30px;	
+			padding-bottom: 4px;		
+		}
+		.wrap .wrap-top .inner .content .idcard div{
+			width: 37%;
+		}
+		.wrap .wrap-top .inner .content .idcard div .picture{
+			width: 100%;
+			height: 95px;
+			border-bottom: 1px solid #e5e5e5;
+			overflow: hidden;
+			position: relative;
+		}
+		/*.wrap .wrap-top .inner .content .idcard div .picture img{
+			width: 41px;
+			height: 38px;
+			margin-top: 40px;
+			margin-left: 40px;
+		}*/
+		.wrap .wrap-top .inner .content .idcard div .picture .camera{
+			background: red;
+			width: 41px;
+			height: 38px;
+			position: absolute;
+			left: 40px;
+			top: 40px;
+			border-radius: 50%;
+			overflow: hidden;
+			background: url('../img/upload.png') no-repeat 0 0;
+			background-size: 41px 38px;
+		}
+		.wrap .wrap-top .inner .content .idcard div .picture .camera input{
+			display: inline-block;
+			width: 41px;
+			height: 38px;
+			background: green;
+			z-index: 100;
+			border-radius: 50%;
+			opacity: 0;
+		}
+		.wrap .wrap-top .inner .content .idcard div .picture .upload{
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			z-index: 1000;
+		}
+		.wrap .wrap-top .inner .content .idcard .right{
+			margin-left: 16%;
+		}
+		.wrap .wrap-top .inner .content .peopleitem{
+			width: 92%;
+			margin: 0 auto;
+		}
+		.wrap .wrap-top .inner .content .peopleitem .identityUl,.wrap .content .peopleitem .identityUl .identityLi{
+			width: 100%;
+		}
+		.wrap .wrap-top .inner  .content .peopleitem .identityUl li{
+			line-height: 50px;
+			overflow: hidden;
+		}
+
+
+		.wrap .wrap-top .inner .content .peopleitem .identityUl li:not(:last-child){
+			border-bottom: 1px solid #e5e5e5
+		}
+		.wrap .wrap-top .inner .content .peopleitem .identityUl .identityLi span{
+			display: inline-block;
+			float: left;
+			width: 22%;
+		}
+		.wrap .wrap-top .inner .content .peopleitem .identityUl .identityLi input{
+			display: inline-block;
+			width: 78%;
+			height: 49px;
+			float: left;
+
+		}
+		.wrap .wrap-top .inner .content .peopleitem .identityUl .identityLi:nth-child(4) .input{
+			width: 35%;
+			text-align: left;
+			font-size: 14px;	
+			position: relative;		
+		}
+		/*.wrap .wrap-top .inner .content .peopleitem .identityUl .identityLi:nth-child(4) .input .tri{
+			display: inline-block;
+			width: 0;
+			height: 0;
+			/*border: 9px solid transparent;*/
+			/*border-left-width: 5px;
+			border-right-width: 5px;
+			border-bottom-width: 9px;
+			border-top-width: 9px;
+			border-style: solid;
+			border-color: transparent;
+			border-top-color: green;
+			position: absolute;
+			right: 0;	
+			top: 20px;			
+		}*/
+		.wrap .wrap-top .inner .content .peopleitem .identityUl .identityLi:nth-child(4) .input input{
+			width: 100%;			
+		}
+		
+		.wrap .wrap-top .inner .content .peopleitem .identityUl .identityLi:nth-child(4) div{
+			width: 8%;
+			height:49px;
+			line-height: 49px;
+			float: left;
+			text-align: center;
+		}
+	/*提交。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。*/
+		.wrap .wrap-submit{
+			width: 100%;
+			margin-top: -50px;
+			background: #ff4c4c;
+			text-align: center;
+			line-height: 50px;
+			color: #ffffff;
+		}
+		/*::-webkit-calendar-picker-indicator {		   		   
+		    border: none;
+		    background-color: transparent;		
+		    color: transparent;
+		    height: 15px;
+		    width: 15px;
+		    opacity: 0;
+		}*/

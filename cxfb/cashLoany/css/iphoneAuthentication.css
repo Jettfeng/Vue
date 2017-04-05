@@ -1,0 +1,29 @@
+		.wrap{
+			text-align: center;
+		}
+		.wrap > img{
+			width: 145px;
+			height: 107px;
+			margin: 55px 0 25px 0;
+			border-top: 1px solid #f2f2f2;
+		}
+		.wrap h2{
+			font-size: 22px;
+			margin-bottom: 6px;
+		}
+		.wrap p{
+			font-size: 15px;
+			color: #999999;
+		}
+		.wrap .btn{
+			width: 66%;
+			height: 44px;
+			margin: 25px auto auto auto;
+			background: #ff4c4c;
+			font-size: 16px;
+			line-height: 44px;
+			border-radius: 6px;
+		}
+		.wrap .btn a{
+			color: #ffffff;
+		}

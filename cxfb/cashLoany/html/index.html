@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=375, user-scalable=no,target-densitydpi=device-dpi,minimum-scale=0.5,maximum-scale=2.0">
+	<title>现金贷</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+	<div class="wrap">
+       <div class="content">
+            <img src="../img/banner1.png" alt="">
+            <div class="brrowfetch">
+                <img src="../img/borrow-amount.png" alt="">
+                <span>借款金额（元）</span>
+                <ul class="money-ul">
+                    <li class="money-li" 
+                     v-on:click="getMoney($index,$event)"
+                     v-for="item in money" 
+                     :class="{active:item==money[mIndex]}"> {{ item.mon }} </li>
+                </ul>
+            </div>
+            <div class="brrowfetch">
+                <img src="../img/borrow-amount.png" alt="">
+                <span>借款时间（天）</span>
+                <ul class="money-ul">
+                    <li class="money-li" 
+                    v-on:click="getTime($index ,$event)"
+                    v-for="item in time" 
+                    :class="{active:item==time[tIndex]}"> {{ item.daycount }} </li>
+                </ul>
+            </div>
+            <div class="tips clear">
+                <span>到期应还<i class="num-color">{{ total }}</i>元</span>
+                <span class="rate"><a href="ratetips.html">费率说明</a></span>
+            </div>
+            <div class="submit" v-on:click="submit">
+                <a href="identityVerification.html">立即申请开户</a>
+            </div>
+            <div class="opentips">
+                <img src="../img/open.png" alt="">
+                <span>申请开户，不收取任何费用</span>
+            </div>
+       </div>
+       <!-- footer........................................................ -->
+       <div class="footer">
+            <ul class="footer-ul">
+                <li>
+                    <a  href="index.html">
+                        <img src="../img/index2.png" alt="">
+                        首页                     
+                    </a>    
+                </li>
+                <li>
+                    <a href="repayment.html">
+                        <img src="../img/repay1.png" alt="">
+                        还款
+                    </a> 
+                </li>
+                <li>
+                    <a href="mine.html">
+                        <img src="../img/mine1.png" alt="">
+                        我
+                    </a> 
+                </li>
+            </ul>
+       </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+var vm = new Vue({
+    el:'.wrap',
+    data:{
+        mIndex:1, 
+        tIndex:1, 
+        unitPrice:1000,
+        selectedDay:14,
+        money: [   
+           {       
+               mon: 500  
+            },     
+           {       
+               mon: 1000    
+            },
+            {       
+               mon: 1500    
+            } ,
+            {       
+               mon: 2000    
+            }   
+          ],
+          time: [   
+           {       
+               daycount: 7
+            },     
+           {       
+               daycount: 14
+            },
+            {       
+               daycount: 21  
+            } ,
+            {       
+               daycount: 28
+            }   
+          ],
+    },
+    methods:{
+        submit:function(){
+          var userAgent = navigator.userAgent
+          alert(userAgent)
+        },
+        getMoney:function(i,event){
+            //console.log(event)
+            this.unitPrice = event.target.innerHTML;
+            //this.mon = this.money[i];
+            this.mIndex=i;
+        },
+        getTime:function(i,event){
+            this.selectedDay = event.target.innerHTML;
+            this.tIndex = i;
+        }
+        
+    },
+    computed:{
+        total:function(){
+            return parseFloat(this.unitPrice) + parseFloat((this.unitPrice * (0.00042 + 0.00768) * this.selectedDay).toFixed(0))
+        }
+    }
+})
+</script>
+</html>

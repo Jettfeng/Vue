@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=375, user-scalable=no,target-densitydpi=device-dpi,minimum-scale=0.5,maximum-scale=2.0">
+	<title>充值2</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<style type="text/css">
+		body{
+			width: 100%;
+			background: #f0f0f0;
+		}
+		.wrap{
+			width: 100%;
+		}
+		.wrap .recharge{
+			background: #ffffff;
+			border-bottom: 1px solid #e9e9e9;
+			height:44px;
+			line-height:44px;
+			overflow: hidden;
+			position: relative;
+		}
+		.wrap .recharge:nth-child(1){
+			color: #666666;
+		}
+		.wrap .recharge span{
+			display: inline-block;
+			float: left;
+		}
+		.wrap .recharge span:nth-child(1){
+			padding-left: 4%;
+			width: 25%;
+		}
+		.wrap .recharge span:nth-child(2){
+			width: 71%;
+		}
+		.wrap .recharge:nth-child(2) span{
+			font-weight: bold;
+		}
+		.wrap .recharge input{
+			display: inline-block;
+			width: 71%;
+			float: left;
+			line-height: 44px;
+		}
+		.wrap .recharge img{
+			position:absolute;
+			right: 4%;
+			top: 35%;
+			width: 15px;
+			height: 15px;
+		}
+		.wrap .next{
+			width: 90%;
+			height: 44px;
+			background: #db3838;
+			line-height: 44px;
+			text-align: center; 
+			margin: 35px auto 10px auto; 
+			border-radius: 5px;
+			font-size: 16px;
+		}
+		.wrap .next a{
+			color: #ffffff;
+		}
+		.wrap > p{
+			font-size: 12px;
+			vertical-align: middle;
+			color: #999999;
+			text-align: center;
+		}
+		.wrap p img{
+			height: 12px;
+			vertical-align: middle;
+		}
+/*...................................................................*/
+		.wrap .bank{
+			width: 100%;
+			height: 60px;
+			background: #ffffff;
+			overflow: hidden;
+		}
+		.wrap .bank div:nth-child(1){
+			width: 20%;
+			height: 100%;
+			float: left;
+			text-align: center;
+			line-height: 60px;
+			margin-right: -2%;
+		}
+		.wrap .bank div:nth-child(1) img{
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+		}
+		.wrap .bank div:nth-child(2){
+			width: 62%;
+			height: 100%;
+			float: left;
+			text-align: left;
+		}
+		.wrap .bank div:nth-child(2) h3{
+			font-size: 14px;
+			font-weight: bold;
+			padding-top: 10px;
+		}
+		.wrap .bank div:nth-child(2) p{
+			font-size: 10px;
+			color: #a1a1a1;
+		}
+		.wrap .bank div:nth-child(3){
+			width: 18%;
+			height: 100%;
+			float: left;
+			position: relative;
+			line-height: 60px;
+			text-align: left;
+			background: url('../img/Rectangle.png') no-repeat 65% 50%;
+			background-size: 8px 14px;
+		}
+		.wrap .bank div:nth-child(3) a{
+			display: block;
+			font-size: 14px;
+		}
+		.wrap .tips{
+			width: 100%;
+			line-height: 33px;
+			height: 33px;
+			padding-left: 4%;
+			background: #f0f0f0;
+			font-size: 12px;
+			color: #999999;
+			overflow: hidden;
+		}
+		.wrap .tips img{
+			width: 15px;
+			height: 15px;
+		}
+		.wrap .tips a{
+			display: block;
+			float: right;
+			margin-right: 30px;
+			color: #999999;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="recharge"><span>账户余额</span><span>32000.00元</span></div>
+		<div class="bank">
+			<div>
+				<img src="../img/head.png" alt="">
+			</div>
+			<div>
+				<h3>招商银行</h3>
+				<p>尾号6887</p>
+			</div>
+			<div>
+				<a href="unbundling.html">解绑</a>				
+			</div>
+		</div>
+		<div class="tips">
+			<img src="../img/delmin.png" alt="">
+			最高充值5万元
+			<a href="###">解绑说明</a>
+		</div>
+		<div class="recharge">
+			<span>充值金额</span>
+			<input type="number" placeholder="最低充值100">
+			<img src="../img/delmin.png" alt="">
+		</div>
+		<div class="next">
+			<a href="###">下一步</a>		
+		</div>
+		<p>福利金融由央行监管的<img src="../img/huifu.png" alt="">进行资金托管</p>
+	</div>
+</body>
+</html>
