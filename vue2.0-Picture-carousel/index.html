@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+	*{margin: 0;padding: 0}
+	.wrap{
+		width: 100%;
+	}
+	.carousel-wrap {
+	  /*height: 453px;*/
+	  width: 100%;
+	  position: absolute;
+		left: 0;
+		top: 0;
+	  overflow: hidden;
+	  background-color: #fff;
+	}
+	.carousel-wrap img{
+		width: 100%;
+		z-index: 0;
+	}
+	.slide-ul {
+	  width: 100%;
+	  height: 100%;
+	}
+	.slide-ul li{
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 10;
+	    width: 100%;
+	    height: 100%;
+	}
+	.slide-ul li img{
+		width: 100%;
+	     height: 100%;
+	}
+	
+	.carousel-items {
+	  position: absolute;
+	  z-index: 10;
+	  top: 70%;
+	  width: 100%;
+	  margin: 0 auto;
+	  text-align: center;
+	  font-size: 0;
+	}
+	.carousel-items span{
+		display: inline-block;
+	    width: 20px;
+	    height: 20px;
+	    border-radius: 50%;
+	    margin: 0 3px;
+	    background-color: #b2b2b2;
+	    cursor: pointer;
+	}
+	.carousel-items .active{
+		background-color: red;
+	}
+
+	/*过渡*/
+	.list-enter-active {
+	  transition: all 1s linear;
+	  transform: translateX(0)
+	}
+
+	.list-leave-active {
+	  transition: all 1s linear;
+	  transform: translateX(-100%)
+	}
+
+	.list-enter {
+	  transform: translateX(100%)
+	}
+
+	.list-leave {
+	  transform: translateX(0)
+	}
+
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="carousel-wrap" id="carousel">
+	<img src="http://pic.qiantucdn.com/images/slideshow/58e6691e30fd3.jpg" alt="">
+    <!-- // 轮播图列表 -->
+    <transition-group tag="ul" class='slide-ul' name="list">
+      <li v-for="(list,index) in slideList" 
+  		  :key="index" v-show="index===currentIndex" 
+  		  @mouseenter="stop" @mouseleave="go">
+        <a :href="list.clickUrl" >
+          <img :src="list.image" :alt="list.desc">
+        </a>
+      </li>
+    </transition-group>
+    <!-- // 轮播图位置指示 -->
+    <div class="carousel-items">
+      <span v-for="(item,index) in slideList.length" 
+      		:class="{'active':index===currentIndex}" 
+      		@mouseover="change(index)">
+	  </span>
+    </div>
+</div>
+	
+</div>
+</body>
+<script type="text/javascript" src="vue2.js"></script>
+<script type="text/javascript">
+var vm = new Vue({
+    el: '.wrap',
+    data: {
+        slideList: [
+            {
+              "clickUrl": "http://www.baidu.com",
+              "desc": "初夏",
+              image: "http://pic.qiantucdn.com/images/slideshow/58e6691e30fd3.jpg"
+            },
+            {
+              "clickUrl": "http://www.sina.com.cn/",
+              "desc": "水墨世界",
+              image: "http://pic.qiantucdn.com/images/slideshow/58e11a5c00964.jpg"
+            },
+            {
+              "clickUrl": "http://www.google.cn/",
+              "desc": "油菜花",
+              image: "http://pic.qiantucdn.com/images/slideshow/58e44e7307494.png"
+            }
+        ],
+        currentIndex: 0,
+        timer: ''
+    },
+    created() {
+            this.$nextTick(() => {
+                this.timer = setInterval(() => {
+                    this.autoPlay()
+                }, 4000)
+            })
+        },
+    methods: {
+        go() {
+            this.timer = setInterval(() => {
+                this.autoPlay()
+            }, 4000)
+        },
+        stop() {
+            clearInterval(this.timer)
+            this.timer = null
+        },
+        change(index) {
+            this.currentIndex = index
+        },
+        autoPlay() {
+            this.currentIndex++
+            if (this.currentIndex > this.slideList.length - 1) {
+                this.currentIndex = 0
+            }
+        }
+    }
+})
+</script>
+</html>
