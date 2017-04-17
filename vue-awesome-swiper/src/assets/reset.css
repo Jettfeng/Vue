@@ -1,0 +1,143 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    max-height: 999999px;
+}
+
+*:not(input,textarea) {
+    -webkit-touch-callout: inherit;
+    -webkit-user-select: auto
+}
+
+body {
+    width: 100%;
+    font-family: Hiragino Sans GB, Arial, Helvetica, "微软雅黑", sans-serif;
+    font-size: 16px;
+    -webkit-touch-callout: inherit;
+    -webkit-user-select: auto;
+    background-color: #f5f6f8 !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: black;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family:"微软雅黑";
+    border:none;
+}
+
+dt, dd {
+    display: inline-block
+}
+
+textarea, input {
+    resize: none;
+    outline: 0
+}
+
+textarea {
+    resize: none;
+    -webkit-appearance: none
+}
+
+ul, ol, li {
+    list-style: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal
+}
+
+button, input, select, textarea {
+    outline: 0;
+}
+
+button,
+input {
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0;
+    margin: 0;
+
+}
+input{
+  color: #424954 !important;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+button, html input[type=button], input[type=submit] {
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+img {
+    vertical-align:middle;
+}
+
+i,b{
+    font-style: normal;
+    font-weight: normal;
+}
+
+label{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear:after{
+    content: "";
+    clear:both;
+    display:block;
+    height:0;
+    overflow:hidden;
+}
+.show{
+    display:block;
+}
+.hide{
+    display: none !important;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+input:disabled{
+  background: transparent;
+  color: #706767 !important;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  background: #f5f6f8;
+}
+
+
